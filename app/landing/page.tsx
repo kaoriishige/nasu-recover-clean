@@ -3,10 +3,9 @@ export default function LandingPage() {
     <div className="bg-white min-h-screen text-gray-800">
       {/* ファーストビュー */}
       <section className="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-20 px-6 text-center">
+        <p className="text-lg text-red-500 font-semibold mb-2">緊急予告!! </p>
         <h1 className="text-4xl md:text-5xl font-bold mb-4">みんなの那須アプリ</h1>
-        <p className="text-2xl font-semibold mb-6">
-          🎉 まずは、55個を7日間無料でお試し使い放題！
-        </p>
+        <p className="text-lg text-red-500 font-semibold mb-6">7月スタート予定!! まずは、55個を7日間無料でお試し使い放題！</p>
         <p className="max-w-2xl mx-auto text-lg">
           特売情報・今日の運勢・相性診断・地域情報アプリ、あなたに役立つ55選、ぜんぶ入り使い放題！
         </p>
@@ -66,7 +65,7 @@ export default function LandingPage() {
             <li>● フードロス激安現品情報</li>
             <li>● 地域フリマアプリ</li>
             <li>● 健康チェックアプリ</li>
-            <li>● ペット情報アプリ</li>
+            <li>● ペット情報アプリなど55種類</li>
           </ul>
         </div>
       </section>
@@ -87,5 +86,7 @@ export default function LandingPage() {
         </a>
       </section>
     </div>
+  )
+}
   )
 }
