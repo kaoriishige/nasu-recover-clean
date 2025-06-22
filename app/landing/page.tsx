@@ -5,7 +5,7 @@ export default function LandingPage() {
       <section className="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-20 px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">みんなの那須アプリ</h1>
         <p className="text-2xl font-semibold mb-6">
-          🎉 まずは7日間無料でお試し使い放題！
+          🎉 まずは、55個を7日間無料でお試し使い放題！
         </p>
         <p className="max-w-2xl mx-auto text-lg">
           特売情報・今日の運勢・相性診断・地域情報アプリ、あなたに役立つ55選、ぜんぶ入り使い放題！
@@ -21,7 +21,7 @@ export default function LandingPage() {
       {/* サブコピー */}
       <section className="py-12 px-6 max-w-4xl mx-auto text-center">
         <h2 className="text-2xl font-bold mb-4">このアプリ55個があれば、毎日が便利に！</h2>
-        <p className="mb-2">使用料もお得満載で、無料と一緒、いや儲かる!!</p>
+        <p className="mb-2 text-red-600 font-semibold">使用料もお得満載で、無料と一緒、いや儲かる!!</p>
         <ul className="text-left inline-block text-base leading-8">
           <li>● 初回7日間は完全無料使い放題！</li>
           <li>● 初月はたったの480円キャンペーン中!!</li>
@@ -33,7 +33,7 @@ export default function LandingPage() {
       </section>
 
       {/* 紹介制度 */}
-      <section className="bg-gray-100 py-12 px-6 text-center">
+      <section className="bg-blue-100 py-12 px-6 text-center">
         <h2 className="text-2xl font-bold mb-4">紹介制度</h2>
         <p className="mb-2">アプリ紹介で紹介手数料30%をゲット！</p>
         <p className="mb-2">3人以上紹介すれば、あなたのアプリ利用料はずっと無料に！</p>
@@ -53,7 +53,7 @@ export default function LandingPage() {
       </section>
 
       {/* ピックアップアプリ */}
-      <section className="bg-gray-50 py-12 px-6 max-w-4xl mx-auto text-center">
+      <section className="bg-blue-100 py-12 px-6 max-w-4xl mx-auto text-center">
         <h2 className="text-2xl font-bold mb-6">ピックアップアプリ一覧</h2>
         <div className="grid md:grid-cols-2 gap-4 text-left text-base">
           <ul className="space-y-2">
