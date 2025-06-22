@@ -3,10 +3,10 @@ export default function LandingPage() {
     <div className="bg-white min-h-screen text-gray-800">
       {/* ファーストビュー */}
       <section className="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-20 px-6 text-center">
-        <p className="text-lg text-red-500 font-semibold mb-2">緊急予告!!</p>
+        <p className="text-lg text-red-500 font-semibold mb-2"><span className="$1">緊急予告!!</span></p>
         <h1 className="text-4xl md:text-5xl font-bold mb-4">みんなの那須アプリ</h1>
-        <p className="text-lg text-red-500 font-semibold mb-2">7月スタート予定!!</p>
-        <p className="text-lg text-white font-semibold mb-6">まずは、55個を7日間無料でお試し使い放題！</p>
+        <p className="text-lg text-red-500 font-semibold mb-2"><span className="$1">まもなくスタート予定!!</span></p>
+        <p className="text-lg text-white font-semibold mb-6"><span className="$1">まずは、55個を7日間無料でお試し使い放題！</span></p>
         <p className="max-w-2xl mx-auto text-lg">
           特売情報・今日の運勢・相性診断・地域情報アプリ、あなたに役立つ55選、ぜんぶ入り使い放題！
         </p>
@@ -66,7 +66,7 @@ export default function LandingPage() {
             <li>● フードロス激安現品情報</li>
             <li>● 地域フリマアプリ</li>
             <li>● 健康チェックアプリ</li>
-            <li>● ペット情報アプリなど55種類が使い放題!!</li>
+            <li>● ペット情報アプリ</li>
           </ul>
         </div>
       </section>
@@ -86,6 +86,16 @@ export default function LandingPage() {
           今すぐ無料で始める
         </a>
       </section>
+          {/* 運営情報 */}
+      <footer className="bg-gray-100 text-center py-8 px-4 text-base text-gray-700">
+        <p>みんなの那須アプリ運営</p>
+        <p>株式会社adtown</p>
+        <p>〒329-2711</p>
+        <p>栃木県那須塩原市石林698-35</p>
+        <p>TEL:0287-39-7577</p>
+      </footer>
     </div>
   )
 }
+
+
