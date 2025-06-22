@@ -66,7 +66,7 @@ export default function LandingPage() {
             <li>● フードロス激安現品情報</li>
             <li>● 地域フリマアプリ</li>
             <li>● 健康チェックアプリ</li>
-            <li>● ペット情報アプリ</li>
+            <li>● ペット情報アプリなど55種類が使い放題!!</li>
           </ul>
         </div>
       </section>
@@ -87,11 +87,5 @@ export default function LandingPage() {
         </a>
       </section>
     </div>
-  )
-}
-
-    </div>
-  )
-}
   )
 }
