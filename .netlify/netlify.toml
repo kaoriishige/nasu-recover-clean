@@ -10,6 +10,7 @@ headersOrigin = "inline"
 [[plugins]]
 origin = "default"
 package = "@netlify/plugin-nextjs"
+pinned_version = "5"
 
 [plugins.inputs]
 

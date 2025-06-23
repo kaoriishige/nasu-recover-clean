@@ -35,9 +35,9 @@ export default function LandingPage() {
       {/* 紹介制度 */}
       <section className="bg-blue-100 py-12 px-6 text-center">
         <h2 className="text-2xl font-bold mb-4">紹介制度</h2>
-        <p className="mb-2">アプリ紹介で紹介手数料30%をゲット！</p>
-        <p className="mb-2">3人以上紹介すれば、あなたのアプリ利用料はずっと無料に！</p>
-        <p className="mb-2">例：100人紹介で毎月約30,000円の紹介手数料</p>
+        <p className="mb-2">アプリ紹介で紹介手数料20%をゲット！</p>
+        <p className="mb-2">5人以上紹介すれば、あなたのアプリ利用料はずっと無料に！</p>
+        <p className="mb-2">例：100人紹介で毎月約20,000円の紹介手数料</p>
       </section>
 
       {/* 使用手順 */}

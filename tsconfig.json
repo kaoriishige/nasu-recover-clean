@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "skipLibCheck": true,
+    "noImplicitAny": false,
     "target": "ES2017",
     "lib": [
       "dom",
@@ -7,7 +9,6 @@
       "esnext"
     ],
     "allowJs": true,
-    "skipLibCheck": true,
     "strict": false,
     "noEmit": true,
     "incremental": true,
