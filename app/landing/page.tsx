@@ -35,10 +35,13 @@ export default function LandingPage() {
       {/* 紹介制度 */}
       <section className="bg-blue-100 py-12 px-6 text-center">
         <h2 className="text-2xl font-bold mb-4">紹介制度</h2>
-        <p className="mb-2">アプリ紹介で紹介手数料20%をゲット！</p>
-        <p className="mb-2">5人以上紹介すれば、あなたのアプリ利用料はずっと無料に！</p>
-        <p className="mb-2">例：100人紹介で毎月約20,000円の紹介手数料</p>
-      </section>
+<p className="mb-2 text-red-600 font-semibold">🎉 スタート紹介キャンペーン開催中！</p>
+<p className="mb-2">📆 <strong>2025年8月31日</strong>までに紹介をスタートした方は、</p>
+<p className="mb-2 font-bold">→ その後ずっと <span className="text-lg text-red-600">紹介手数料30%</span> の権利を獲得！</p>
+<p className="mb-4">📆 <strong>2025年9月1日以降</strong>に紹介を始めた方は、</p>
+<p className="mb-2">→ <span className="text-lg text-blue-700 font-semibold">紹介手数料20%</span> となります。</p>
+<p className="mb-2">紹介した人数や成果に応じて毎月報酬を受け取れます。</p>
+<p className="mb-2">紹介制度を活用して、実質無料どころかプラスの収入に！</p>
 
       {/* 使用手順 */}
       <section className="py-12 px-6 max-w-3xl mx-auto text-center">
@@ -66,7 +69,7 @@ export default function LandingPage() {
             <li>● フードロス激安現品情報</li>
             <li>● 地域フリマアプリ</li>
             <li>● 健康チェックアプリ</li>
-            <li>● ペット情報アプリなど55種類が使い放題</li>
+            <li>● ペット情報アプリ</li>
           </ul>
         </div>
       </section>
@@ -97,6 +100,7 @@ export default function LandingPage() {
     </div>
   )
 }
+
 
 
 
