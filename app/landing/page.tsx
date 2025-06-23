@@ -33,15 +33,21 @@ export default function LandingPage() {
       </section>
 
       {/* 紹介制度 */}
-      <section className="bg-blue-100 py-12 px-6 text-center">
-        <h2 className="text-2xl font-bold mb-4">紹介制度</h2>
-<p className="mb-2 text-red-600 font-semibold">🎉 スタート紹介キャンペーン開催中！</p>
-<p className="mb-2">📆 <strong>2025年8月31日</strong>までに紹介をスタートした方は、</p>
-<p className="mb-2 font-bold">→ その後ずっと <span className="text-lg text-red-600">紹介手数料30%</span> の権利を獲得！</p>
-<p className="mb-4">📆 <strong>2025年9月1日以降</strong>に紹介を始めた方は、</p>
-<p className="mb-2">→ <span className="text-lg text-blue-700 font-semibold">紹介手数料20%</span> となります。</p>
-<p className="mb-2">紹介した人数や成果に応じて毎月報酬を受け取れます。</p>
-<p className="mb-2">紹介制度を活用して、実質無料どころかプラスの収入に！</p>
+<section className="bg-blue-100 py-12 px-6 text-center">
+  <h2 className="text-2xl font-bold mb-4">紹介制度</h2>
+  <p className="mb-2 text-red-600 font-semibold">🎉 スタート紹介キャンペーン開催中！</p>
+  <p className="mb-2">📆 <strong>2025年8月31日</strong>までに紹介をスタートした方は、</p>
+  <p className="mb-2 font-bold">
+    → その後ずっと <span className="text-lg text-red-600">紹介手数料30%</span> の権利を獲得！
+  </p>
+  <p className="mb-4">📆 <strong>2025年9月1日以降</strong>に紹介を始めた方は、</p>
+  <p className="mb-2">
+    → <span className="text-lg text-blue-700 font-semibold">紹介手数料20%</span> となります。
+  </p>
+  <p className="mb-2">紹介した人数や成果に応じて毎月報酬を受け取れます。</p>
+  <p className="mb-2">紹介制度を活用して、実質無料どころかプラスの収入に！</p>
+</section>
+
 
       {/* 使用手順 */}
       <section className="py-12 px-6 max-w-3xl mx-auto text-center">
