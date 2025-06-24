@@ -33,21 +33,20 @@ export default function LandingPage() {
       </section>
 
       {/* 紹介制度 */}
-<section className="bg-blue-100 py-12 px-6 text-center">
-  <h2 className="text-2xl font-bold mb-4">紹介制度</h2>
-  <p className="mb-2 text-red-600 font-semibold">🎉 スタート紹介キャンペーン開催中！</p>
-  <p className="mb-2">📆 <strong>2025年8月31日</strong>までに紹介をスタートした方は、</p>
-  <p className="mb-2 font-bold">
-    → その後ずっと <span className="text-lg text-red-600">紹介手数料30%</span> の権利を獲得！
-  </p>
-  <p className="mb-4">📆 <strong>2025年9月1日以降</strong>に紹介を始めた方は、</p>
-  <p className="mb-2">
-    → <span className="text-lg text-blue-700 font-semibold">紹介手数料20%</span> となります。
-  </p>
-  <p className="mb-2">紹介した人数や成果に応じて毎月報酬を受け取れます。</p>
-  <p className="mb-2">紹介制度を活用して、実質無料どころかプラスの収入に！</p>
-</section>
-
+      <section className="bg-blue-100 py-12 px-6 text-center">
+        <h2 className="text-2xl font-bold mb-4">紹介制度</h2>
+        <p className="mb-2 text-red-600 font-semibold">🎉 スタート紹介キャンペーン開催中！</p>
+        <p className="mb-2">📆 <strong>2025年8月31日</strong>までに紹介をスタートした方は、</p>
+        <p className="mb-2 font-bold">
+          → その後ずっと <span className="text-lg text-red-600">紹介手数料30%</span> の権利を獲得！
+        </p>
+        <p className="mb-4">📆 <strong>2025年9月1日以降</strong>に紹介を始めた方は、</p>
+        <p className="mb-2">
+          → <span className="text-lg text-blue-700 font-semibold">紹介手数料20%</span> となります。
+        </p>
+        <p className="mb-2">紹介した人数や成果に応じて毎月報酬を受け取れます。</p>
+        <p className="mb-2">紹介制度を活用して、実質無料どころかプラスの収入に！</p>
+      </section>
 
       {/* 使用手順 */}
       <section className="py-12 px-6 max-w-3xl mx-auto text-center">
@@ -88,14 +87,36 @@ export default function LandingPage() {
         <p className="text-lg mb-8">
           「お得情報」も「地域情報」も「エンタメ情報」もまとめて使い放題。
         </p>
-        <a
-          href="/subscribe"
-          className="inline-block bg-blue-600 text-white font-bold text-lg px-6 py-3 rounded-full shadow hover:bg-blue-700 transition"
-        >
-          今すぐ無料で始める
-        </a>
       </section>
-          {/* 運営情報 */}
+
+      {/* ✅ 修正版 LINE登録セクション */}
+      <section className="bg-green-50 py-16 px-6 text-center">
+        <h2 className="text-3xl font-bold text-green-800 mb-6">🎁 先行登録キャンペーン実施中！</h2>
+        <p className="text-lg mb-8">LINE登録で「みんなの那須アプリ」スタートの連絡をいたします！</p>
+        <ul className="text-left inline-block text-lg mb-8 space-y-3">
+          <li className="flex items-center"><span className="text-green-600 mr-2">✅</span>アプリを誰よりも早く体験</li>
+          <li className="flex items-center"><span className="text-green-600 mr-2">✅</span>紹介報酬 30％がずっと続く特典</li>
+          <li className="flex items-center"><span className="text-green-600 mr-2">✅</span>LINE限定情報 をお届け</li>
+        </ul>
+        <div className="mb-6">
+          <img
+            src="/line-qr.png"
+            alt="LINE登録QRコード"
+            className="mx-auto w-40 h-40 border border-gray-300 rounded-md"
+          />
+        </div>
+        <a
+          href="https://line.me/R/ti/p/xxxxxxxx" // ← LINE登録URLに差し替えてください
+          className="inline-block bg-green-600 hover:bg-green-700 text-white font-bold text-lg px-8 py-4 rounded-full shadow transition"
+        >
+          ✅ 今すぐLINE登録
+        </a>
+        <p className="mt-6 text-sm text-gray-600">
+          ※ 特典は予告なく終了する場合があります。お早めにご登録ください。
+        </p>
+      </section>
+
+      {/* 運営情報 */}
       <footer className="bg-gray-100 text-center py-8 px-4 text-base text-gray-700">
         <p>みんなの那須アプリ運営</p>
         <p>株式会社adtown</p>
@@ -104,16 +125,6 @@ export default function LandingPage() {
         <p>TEL:0287-39-7577</p>
       </footer>
     </div>
-  )
+  );
 }
-
-
-
-
-
-
-
-
-
-
 
