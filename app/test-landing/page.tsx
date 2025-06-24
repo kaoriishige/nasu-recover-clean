@@ -33,21 +33,20 @@ export default function LandingPage() {
       </section>
 
       {/* 紹介制度 */}
-<section className="bg-blue-100 py-12 px-6 text-center">
-  <h2 className="text-2xl font-bold mb-4">紹介制度</h2>
-  <p className="mb-2 text-red-600 font-semibold">🎉 スタート紹介キャンペーン開催中！</p>
-  <p className="mb-2">📆 <strong>2025年8月31日</strong>までに紹介をスタートした方は、</p>
-  <p className="mb-2 font-bold">
-    → その後ずっと <span className="text-lg text-red-600">紹介手数料30%</span> の権利を獲得！
-  </p>
-  <p className="mb-4">📆 <strong>2025年9月1日以降</strong>に紹介を始めた方は、</p>
-  <p className="mb-2">
-    → <span className="text-lg text-blue-700 font-semibold">紹介手数料20%</span> となります。
-  </p>
-  <p className="mb-2">紹介した人数や成果に応じて毎月報酬を受け取れます。</p>
-  <p className="mb-2">紹介制度を活用して、実質無料どころかプラスの収入に！</p>
-</section>
-
+      <section className="bg-blue-100 py-12 px-6 text-center">
+        <h2 className="text-2xl font-bold mb-4">紹介制度</h2>
+        <p className="mb-2 text-red-600 font-semibold">🎉 スタート紹介キャンペーン開催中！</p>
+        <p className="mb-2">📆 <strong>2025年8月31日</strong>までに紹介をスタートした方は、</p>
+        <p className="mb-2 font-bold">
+          → その後ずっと <span className="text-lg text-red-600">紹介手数料30%</span> の権利を獲得！
+        </p>
+        <p className="mb-4">📆 <strong>2025年9月1日以降</strong>に紹介を始めた方は、</p>
+        <p className="mb-2">
+          → <span className="text-lg text-blue-700 font-semibold">紹介手数料20%</span> となります。
+        </p>
+        <p className="mb-2">紹介した人数や成果に応じて毎月報酬を受け取れます。</p>
+        <p className="mb-2">紹介制度を活用して、実質無料どころかプラスの収入に！</p>
+      </section>
 
       {/* 使用手順 */}
       <section className="py-12 px-6 max-w-3xl mx-auto text-center">
@@ -95,7 +94,19 @@ export default function LandingPage() {
           今すぐ無料で始める
         </a>
       </section>
-          {/* 運営情報 */}
+
+      {/* LINE 登録セクション */}
+      <section className="bg-green-100 py-16 px-6 text-center">
+        <h2 className="text-2xl font-bold mb-4">LINEで最新情報を受け取る</h2>
+        <p className="mb-4">友だち追加して、お得情報・リリース案内をいち早くGET！</p>
+        <img
+          src="/line-qr.png"
+          alt="LINE QRコード"
+          className="mx-auto w-40 h-40 border border-gray-300 rounded-md"
+        />
+      </section>
+
+      {/* 運営情報 */}
       <footer className="bg-gray-100 text-center py-8 px-4 text-base text-gray-700">
         <p>みんなの那須アプリ運営</p>
         <p>株式会社adtown</p>
@@ -106,14 +117,5 @@ export default function LandingPage() {
     </div>
   )
 }
-
-
-
-
-
-
-
-
-
 
 

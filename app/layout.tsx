@@ -1,4 +1,5 @@
 // app/layout.tsx
+import * as React from 'react' // ← これがあれば赤線確実に消える
 import './globals.css'
 import type { Metadata } from 'next'
 
@@ -18,3 +19,4 @@ export default function RootLayout({
     </html>
   )
 }
+
