@@ -1,43 +1,42 @@
-'use client'
+'use client';
 
-import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
-import { doc, getDoc, updateDoc } from 'firebase/firestore'
-import { db } from '@/lib/firebase'
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { doc, getDoc, updateDoc } from 'firebase/firestore';
+import { db } from '../../../lib/firebase'; // ✅ 相対パスに修正
 
-export default function EditAppPage() {
-  const router = useRouter()
-  const { id } = router.query as { id: string }
-  const [name, setName] = useState('')
-  const [description, setDescription] = useState('')
-  const [categories, setCategories] = useState('')
+export default function EditAppPage({ params }: { params: { id: string } }) {
+  const router = useRouter();
+  const { id } = params;
+
+  const [name, setName] = useState('');
+  const [description, setDescription] = useState('');
+  const [categories, setCategories] = useState('');
 
   useEffect(() => {
-    if (!id) return
     const fetch = async () => {
-      const ref = doc(db, 'apps', id)
-      const snap = await getDoc(ref)
+      const ref = doc(db, 'apps', id);
+      const snap = await getDoc(ref);
       if (snap.exists()) {
-        const data = snap.data()
-        setName(data.name || '')
-        setDescription(data.description || '')
-        setCategories((data.categories || []).join(', '))
+        const data = snap.data();
+        setName(data.name || '');
+        setDescription(data.description || '');
+        setCategories((data.categories || []).join(', '));
       }
-    }
-    fetch()
-  }, [id])
+    };
+    fetch();
+  }, [id]);
 
   const save = async () => {
-    if (!id) return
-    const ref = doc(db, 'apps', id)
+    const ref = doc(db, 'apps', id);
     await updateDoc(ref, {
       name,
       description,
-      categories: categories.split(',').map(c => c.trim())
-    })
-    alert('✅ 保存しました')
-    router.push('/admin/apps')
-  }
+      categories: categories.split(',').map(c => c.trim()),
+    });
+    alert('✅ 保存しました');
+    router.push('/admin/apps');
+  };
 
   return (
     <div style={{ padding: '2rem', maxWidth: '600px', margin: '0 auto' }}>
@@ -52,5 +51,6 @@ export default function EditAppPage() {
         保存する
       </button>
     </div>
-  )
+  );
 }
+

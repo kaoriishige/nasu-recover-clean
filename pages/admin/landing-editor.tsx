@@ -1,56 +1,92 @@
-// pages/admin/inquiries.tsx
-// これは「問い合わせ一覧」を表示する管理者ページです
+import { useEffect, useState } from 'react';
+import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { db } from '@/lib/firebase';
 
-import { useEffect, useState } from "react";
-import { collection, getDocs, orderBy, query } from "firebase/firestore";
-import { db } from "@/lib/firebase";
-import AdminLayout from "@/components/admin/AdminLayout";
-
-type Inquiry = {
-  id: string;
-  name: string;
-  email: string;
-  message: string;
-  createdAt: { seconds: number; nanoseconds: number };
-};
-
-export default function InquiriesPage() {
-  const [inquiries, setInquiries] = useState<Inquiry[]>([]);
+export default function LandingEditorPage() {
+  const [title, setTitle] = useState('');
+  const [subtitle, setSubtitle] = useState('');
+  const [campaign, setCampaign] = useState('');
+  const [cta, setCta] = useState('');
+  const [benefits, setBenefits] = useState<string[]>([]);
+  const [referralNote, setReferralNote] = useState('');
+  const [companyName, setCompanyName] = useState('');
+  const [message, setMessage] = useState('');
 
   useEffect(() => {
-    const fetchInquiries = async () => {
-      const q = query(collection(db, "inquiries"), orderBy("createdAt", "desc"));
-      const querySnapshot = await getDocs(q);
-      const data = querySnapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      })) as Inquiry[];
-      setInquiries(data);
+    const fetch = async () => {
+      const ref = doc(db, 'settings', 'landingV2');
+      const snap = await getDoc(ref);
+      if (snap.exists()) {
+        const d = snap.data();
+        setTitle(d.title || '');
+        setSubtitle(d.subtitle || '');
+        setCampaign(d.campaign || '');
+        setCta(d.cta || '');
+        setBenefits(d.benefits || []);
+        setReferralNote(d.referralNote || '');
+        setCompanyName(d.companyName || '');
+      }
     };
-
-    fetchInquiries();
+    fetch();
   }, []);
 
-  return (
-    <AdminLayout>
-      <h1 className="text-2xl font-bold mb-4">📩 問い合わせ一覧</h1>
+  const handleSave = async () => {
+    const ref = doc(db, 'settings', 'landingV2');
+    await setDoc(ref, {
+      title,
+      subtitle,
+      campaign,
+      cta,
+      benefits,
+      referralNote,
+      companyName,
+    });
+    setMessage('✅ 保存しました');
+    setTimeout(() => setMessage(''), 3000);
+  };
 
-      {inquiries.length === 0 ? (
-        <p>現在、問い合わせはありません。</p>
-      ) : (
-        <div className="space-y-4">
-          {inquiries.map((inq) => (
-            <div key={inq.id} className="border rounded-lg p-4 bg-white shadow-sm">
-              <p className="text-sm text-gray-500">
-                {new Date(inq.createdAt.seconds * 1000).toLocaleString()}
-              </p>
-              <p className="font-semibold">{inq.name}（{inq.email}）</p>
-              <p className="mt-2 whitespace-pre-wrap">{inq.message}</p>
-            </div>
-          ))}
-        </div>
-      )}
-    </AdminLayout>
+  return (
+    <div className="p-8 max-w-3xl mx-auto">
+      <h1 className="text-2xl font-bold mb-6">ランディングページ編集（本番用）</h1>
+
+      <label className="block font-semibold">タイトル</label>
+      <input value={title} onChange={e => setTitle(e.target.value)} className="w-full border p-2 mb-4" />
+
+      <label className="block font-semibold">サブタイトル</label>
+      <input value={subtitle} onChange={e => setSubtitle(e.target.value)} className="w-full border p-2 mb-4" />
+
+      <label className="block font-semibold">キャンペーン文</label>
+      <input value={campaign} onChange={e => setCampaign(e.target.value)} className="w-full border p-2 mb-4" />
+
+      <label className="block font-semibold">CTAボタン文言</label>
+      <input value={cta} onChange={e => setCta(e.target.value)} className="w-full border p-2 mb-4" />
+
+      <label className="block font-semibold">ベネフィット（改行区切りで複数）</label>
+      <textarea
+        value={benefits.join('\n')}
+        onChange={e => setBenefits(e.target.value.split('\n'))}
+        className="w-full border p-2 mb-4"
+        rows={5}
+      />
+
+      <label className="block font-semibold">紹介制度の説明</label>
+      <textarea
+        value={referralNote}
+        onChange={e => setReferralNote(e.target.value)}
+        className="w-full border p-2 mb-4"
+      />
+
+      <label className="block font-semibold">会社情報（フッター）</label>
+      <textarea
+        value={companyName}
+        onChange={e => setCompanyName(e.target.value)}
+        className="w-full border p-2 mb-4"
+      />
+
+      <button onClick={handleSave} className="bg-blue-600 text-white px-6 py-2 rounded">保存する</button>
+      {message && <p className="text-green-600 mt-4">{message}</p>}
+    </div>
   );
 }
+
 
