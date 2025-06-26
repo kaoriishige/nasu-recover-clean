@@ -20,7 +20,7 @@ export default function LandingEditorV3() {
       const snap = await getDoc(ref);
       if (snap.exists()) {
         const d = snap.data();
-        console.log('✅ Firestore 読み込み成功:', d); // ← 追加ログ
+        console.log('✅ Firestore 読み込み成功:', d);
         setTitle(d.title || '');
         setSubtitle(d.subtitle || '');
         setCampaign(d.campaign || '');
@@ -46,8 +46,8 @@ export default function LandingEditorV3() {
       referralNote,
       companyName,
     });
-    console.log('✅ Firestore 書き込み成功'); // ← 追加ログ
-    setMessage('✅ 保存しました');
+    console.log('✅ Firestore 書き込み成功');
+    setMessage('✅ 保存しました（v3）');
     setTimeout(() => setMessage(''), 3000);
   };
 
@@ -56,27 +56,64 @@ export default function LandingEditorV3() {
       <h1 className="text-2xl font-bold mb-6">【v3】本番ランディングページ編集</h1>
 
       <label className="font-semibold block">タイトル</label>
-      <input value={title} onChange={e => setTitle(e.target.value)} className="w-full border p-2 mb-4" />
+      <input
+        value={title}
+        onChange={e => setTitle(e.target.value)}
+        className="w-full border p-2 mb-4"
+      />
 
       <label className="font-semibold block">サブタイトル</label>
-      <input value={subtitle} onChange={e => setSubtitle(e.target.value)} className="w-full border p-2 mb-4" />
+      <input
+        value={subtitle}
+        onChange={e => setSubtitle(e.target.value)}
+        className="w-full border p-2 mb-4"
+      />
 
       <label className="font-semibold block">キャンペーン文</label>
-      <input value={campaign} onChange={e => setCampaign(e.target.value)} className="w-full border p-2 mb-4" />
+      <input
+        value={campaign}
+        onChange={e => setCampaign(e.target.value)}
+        className="w-full border p-2 mb-4"
+      />
 
       <label className="font-semibold block">CTA文言</label>
-      <input value={cta} onChange={e => setCta(e.target.value)} className="w-full border p-2 mb-4" />
+      <input
+        value={cta}
+        onChange={e => setCta(e.target.value)}
+        className="w-full border p-2 mb-4"
+      />
 
       <label className="font-semibold block">ベネフィット（改行区切り）</label>
-      <textarea value={benefitsText} onChange={e => setBenefitsText(e.target.value)} className="w-full border p-2 mb-4" rows={4} />
+      <textarea
+        value={benefitsText}
+        onChange={e => setBenefitsText(e.target.value)}
+        className="w-full border p-2 mb-4"
+        rows={4}
+      />
 
       <label className="font-semibold block">紹介制度の説明</label>
-      <textarea value={referralNote} onChange={e => setReferralNote(e.target.value)} className="w-full border p-2 mb-4" rows={3} />
+      <textarea
+        value={referralNote}
+        onChange={e => setReferralNote(e.target.value)}
+        className="w-full border p-2 mb-4"
+        rows={3}
+      />
 
       <label className="font-semibold block">会社情報</label>
-      <textarea value={companyName} onChange={e => setCompanyName(e.target.value)} className="w-full border p-2 mb-4" rows={3} />
+      <textarea
+        value={companyName}
+        onChange={e => setCompanyName(e.target.value)}
+        className="w-full border p-2 mb-4"
+        rows={3}
+      />
 
-      <button onClick={save} className="bg-blue-600 text-white px-6 py-2 rounded">保存する</button>
+      <button
+        onClick={save}
+        className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
+      >
+        保存する（v3）
+      </button>
+
       {message && <p className="text-green-600 mt-4">{message}</p>}
     </div>
   );
