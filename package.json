@@ -7,24 +7,17 @@
     "start": "next start"
   },
   "dependencies": {
-    "@headlessui/react": "^2.2.4",
     "firebase": "^11.9.1",
-    "firebase-admin": "^13.4.0",
-    "firebase-functions": "^6.3.2",
-    "next": "^15.3.4",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "stripe": "^11.18.0",
-    "uuid": "^11.1.0"
+    "next": "^14.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/node": "^20.4.2",
-    "@types/react": "^18.2.17",
-    "@types/stripe": "^8.0.416",
-    "tailwindcss": "^3.4.1",
-    "postcss": "^8.4.31",
-    "autoprefixer": "^10.4.17",
-    "typescript": "^5.4.5"
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.28",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.3.2",
+    "typescript": "^5.0.0"
   }
 }
-
