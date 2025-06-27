@@ -1,0 +1,23 @@
+'use client';
+
+import { ReactNode } from 'react';
+import { signOut } from 'firebase/auth';
+import { auth } from '@/lib/firebase';
+
+export default function AdminLayout({ children }: { children: ReactNode }) {
+  const handleLogout = async () => {
+    await signOut(auth);
+  };
+
+  return (
+    <div className="p-6">
+      <header className="flex justify-between items-center mb-4">
+        <h1 className="text-2xl font-bold">管理画面</h1>
+        <button onClick={handleLogout} className="text-sm text-red-600">
+          ログアウト
+        </button>
+      </header>
+      {children}
+    </div>
+  );
+}
